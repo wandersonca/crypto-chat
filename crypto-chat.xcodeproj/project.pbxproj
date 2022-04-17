@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		389784ED280CB5B800D52C08 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 389784EC280CB5B800D52C08 /* README.md */; };
+		38D55954280B14920000EFBA /* AddPrivateKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D55953280B14920000EFBA /* AddPrivateKeyViewController.swift */; };
+		38D55956280B19C30000EFBA /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D55955280B19C30000EFBA /* CreateProfileViewController.swift */; };
+		38D55958280B2D290000EFBA /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D55957280B2D290000EFBA /* ConversationTableViewController.swift */; };
 		38DEC1F02807AF280026F370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC1EF2807AF280026F370 /* AppDelegate.swift */; };
 		38DEC1F22807AF280026F370 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC1F12807AF280026F370 /* SceneDelegate.swift */; };
-		38DEC1F42807AF280026F370 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC1F32807AF280026F370 /* ViewController.swift */; };
-		38DEC1F72807AF280026F370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DEC1F52807AF280026F370 /* Main.storyboard */; };
 		38DEC1F92807AF290026F370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DEC1F82807AF290026F370 /* Assets.xcassets */; };
 		38DEC1FC2807AF290026F370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DEC1FA2807AF290026F370 /* LaunchScreen.storyboard */; };
-		38DEC2072807AF290026F370 /* crypto_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC2062807AF290026F370 /* crypto_chatTests.swift */; };
-		38DEC2112807AF290026F370 /* crypto_chatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC2102807AF290026F370 /* crypto_chatUITests.swift */; };
-		38DEC2132807AF290026F370 /* crypto_chatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC2122807AF290026F370 /* crypto_chatUITestsLaunchTests.swift */; };
+		38DEC2072807AF290026F370 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC2062807AF290026F370 /* UnitTests.swift */; };
+		38DEC2222807AF490026F370 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC21F2807AF490026F370 /* ConversationViewController.swift */; };
+		38DEC2232807AF490026F370 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC2202807AF490026F370 /* ProfileViewController.swift */; };
+		38DEC2242807AF490026F370 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC2212807AF490026F370 /* ContactViewController.swift */; };
+		38DEC2262807AF540026F370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38DEC2252807AF540026F370 /* Main.storyboard */; };
+		38DEC2282807AFE90026F370 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC2272807AFE90026F370 /* Account.swift */; };
+		38DEC22A2807B0150026F370 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC2292807B0150026F370 /* Message.swift */; };
+		38DEC22C2807B0370026F370 /* CryptoFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC22B2807B0370026F370 /* CryptoFacade.swift */; };
+		38DEC22E2807B07A0026F370 /* ChatServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC22D2807B07A0026F370 /* ChatServerClient.swift */; };
+		38DEC2302808BAA30026F370 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DEC22F2808BAA30026F370 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +45,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		389784EC280CB5B800D52C08 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		38D55953280B14920000EFBA /* AddPrivateKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPrivateKeyViewController.swift; sourceTree = "<group>"; };
+		38D55955280B19C30000EFBA /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		38D55957280B2D290000EFBA /* ConversationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
 		38DEC1EC2807AF280026F370 /* crypto-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "crypto-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DEC1EF2807AF280026F370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38DEC1F12807AF280026F370 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38DEC1F32807AF280026F370 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		38DEC1F62807AF280026F370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38DEC1F82807AF290026F370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38DEC1FB2807AF290026F370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38DEC1FD2807AF290026F370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DEC2022807AF290026F370 /* crypto-chatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "crypto-chatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		38DEC2062807AF290026F370 /* crypto_chatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crypto_chatTests.swift; sourceTree = "<group>"; };
+		38DEC2062807AF290026F370 /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		38DEC20C2807AF290026F370 /* crypto-chatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "crypto-chatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		38DEC2102807AF290026F370 /* crypto_chatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crypto_chatUITests.swift; sourceTree = "<group>"; };
-		38DEC2122807AF290026F370 /* crypto_chatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crypto_chatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38DEC21F2807AF490026F370 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		38DEC2202807AF490026F370 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		38DEC2212807AF490026F370 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		38DEC2252807AF540026F370 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		38DEC2272807AFE90026F370 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		38DEC2292807B0150026F370 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		38DEC22B2807B0370026F370 /* CryptoFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoFacade.swift; sourceTree = "<group>"; };
+		38DEC22D2807B07A0026F370 /* ChatServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServerClient.swift; sourceTree = "<group>"; };
+		38DEC22F2808BAA30026F370 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +97,9 @@
 		38DEC1E32807AF270026F370 = {
 			isa = PBXGroup;
 			children = (
+				389784EC280CB5B800D52C08 /* README.md */,
 				38DEC1EE2807AF280026F370 /* crypto-chat */,
-				38DEC2052807AF290026F370 /* crypto-chatTests */,
-				38DEC20F2807AF290026F370 /* crypto-chatUITests */,
+				38DEC2052807AF290026F370 /* Tests */,
 				38DEC1ED2807AF280026F370 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,32 +117,57 @@
 		38DEC1EE2807AF280026F370 /* crypto-chat */ = {
 			isa = PBXGroup;
 			children = (
+				38DEC2332808BC260026F370 /* ChatServerClient */,
+				38DEC2322808BBF40026F370 /* Model */,
+				38DEC2312808BB6F0026F370 /* ViewControllers */,
 				38DEC1EF2807AF280026F370 /* AppDelegate.swift */,
 				38DEC1F12807AF280026F370 /* SceneDelegate.swift */,
-				38DEC1F32807AF280026F370 /* ViewController.swift */,
-				38DEC1F52807AF280026F370 /* Main.storyboard */,
 				38DEC1F82807AF290026F370 /* Assets.xcassets */,
 				38DEC1FA2807AF290026F370 /* LaunchScreen.storyboard */,
+				38DEC2252807AF540026F370 /* Main.storyboard */,
 				38DEC1FD2807AF290026F370 /* Info.plist */,
 			);
 			path = "crypto-chat";
 			sourceTree = "<group>";
 		};
-		38DEC2052807AF290026F370 /* crypto-chatTests */ = {
+		38DEC2052807AF290026F370 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				38DEC2062807AF290026F370 /* crypto_chatTests.swift */,
+				38DEC2062807AF290026F370 /* UnitTests.swift */,
 			);
-			path = "crypto-chatTests";
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		38DEC20F2807AF290026F370 /* crypto-chatUITests */ = {
+		38DEC2312808BB6F0026F370 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				38DEC2102807AF290026F370 /* crypto_chatUITests.swift */,
-				38DEC2122807AF290026F370 /* crypto_chatUITestsLaunchTests.swift */,
+				38D55953280B14920000EFBA /* AddPrivateKeyViewController.swift */,
+				38D55955280B19C30000EFBA /* CreateProfileViewController.swift */,
+				38DEC2212807AF490026F370 /* ContactViewController.swift */,
+				38DEC21F2807AF490026F370 /* ConversationViewController.swift */,
+				38D55957280B2D290000EFBA /* ConversationTableViewController.swift */,
+				38DEC2202807AF490026F370 /* ProfileViewController.swift */,
 			);
-			path = "crypto-chatUITests";
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		38DEC2322808BBF40026F370 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38DEC22F2808BAA30026F370 /* DataController.swift */,
+				38DEC2272807AFE90026F370 /* Account.swift */,
+				38DEC2292807B0150026F370 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38DEC2332808BC260026F370 /* ChatServerClient */ = {
+			isa = PBXGroup;
+			children = (
+				38DEC22B2807B0370026F370 /* CryptoFacade.swift */,
+				38DEC22D2807B07A0026F370 /* ChatServerClient.swift */,
+			);
+			path = ChatServerClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +276,8 @@
 			files = (
 				38DEC1FC2807AF290026F370 /* LaunchScreen.storyboard in Resources */,
 				38DEC1F92807AF290026F370 /* Assets.xcassets in Resources */,
-				38DEC1F72807AF280026F370 /* Main.storyboard in Resources */,
+				389784ED280CB5B800D52C08 /* README.md in Resources */,
+				38DEC2262807AF540026F370 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +302,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38DEC1F42807AF280026F370 /* ViewController.swift in Sources */,
+				38DEC22C2807B0370026F370 /* CryptoFacade.swift in Sources */,
+				38D55954280B14920000EFBA /* AddPrivateKeyViewController.swift in Sources */,
 				38DEC1F02807AF280026F370 /* AppDelegate.swift in Sources */,
+				38DEC2232807AF490026F370 /* ProfileViewController.swift in Sources */,
+				38D55956280B19C30000EFBA /* CreateProfileViewController.swift in Sources */,
+				38DEC2222807AF490026F370 /* ConversationViewController.swift in Sources */,
+				38D55958280B2D290000EFBA /* ConversationTableViewController.swift in Sources */,
 				38DEC1F22807AF280026F370 /* SceneDelegate.swift in Sources */,
+				38DEC22A2807B0150026F370 /* Message.swift in Sources */,
+				38DEC22E2807B07A0026F370 /* ChatServerClient.swift in Sources */,
+				38DEC2302808BAA30026F370 /* DataController.swift in Sources */,
+				38DEC2242807AF490026F370 /* ContactViewController.swift in Sources */,
+				38DEC2282807AFE90026F370 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38DEC2072807AF290026F370 /* crypto_chatTests.swift in Sources */,
+				38DEC2072807AF290026F370 /* UnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +330,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38DEC2112807AF290026F370 /* crypto_chatUITests.swift in Sources */,
-				38DEC2132807AF290026F370 /* crypto_chatUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +349,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		38DEC1F52807AF280026F370 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38DEC1F62807AF280026F370 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		38DEC1FA2807AF290026F370 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,9 +18,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let dataController = DataController.shared
+        dataController.loadData()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let _ = dataController.getProfile(), let _ = dataController.getPrivateKey() {
+            // instantiate the main tab bar controller and set it as root view controller
+            // using the storyboard identifier
+            let mainTabBarController = storyboard.instantiateViewController(identifier: "tabBar")
+            window?.rootViewController = mainTabBarController
+        } else {
+            // if user doesn't have a profile, hit the "signup" VC
+            // instantiate the navigation controller and set it as root view controller
+            // using the storyboard identifier
+            let loginNavController = storyboard.instantiateViewController(identifier: "signup")
+            window?.rootViewController = loginNavController
+        }
+    }
+    
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else {
+            return
+        }
+        
+        // change the root view controller to your specific view controller
+        window.rootViewController = vc
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
+        DataController.shared.saveData()
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
@@ -42,6 +71,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
+
+        DataController.shared.saveData()
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
