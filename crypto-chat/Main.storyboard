@@ -82,7 +82,7 @@
         <!--Profile-->
         <scene sceneID="w3u-Qv-ydo">
             <objects>
-                <viewController title="Profile" id="jtB-YA-a6E" customClass="ProfileViewController" customModule="crypto_chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="jtB-YA-a6E" customClass="AccountViewController" customModule="crypto_chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ufC-Ax-tp1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,7 +276,7 @@ MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEvQEyMB5Umy/LKMrk58BiKBoOHwaN
         <!--Conversation-->
         <scene sceneID="aad-D1-AfJ">
             <objects>
-                <viewController title="Conversation" id="Pyn-9z-TAn" customClass="ConversationViewController" customModule="crypto_chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Conversation" id="Pyn-9z-TAn" customClass="ChatViewController" customModule="crypto_chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yoc-65-4lm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -523,7 +523,7 @@ Note: The should be a Elliptic Cruve 256-bit PEM key. You can generate one by us
         <!--Conversation-->
         <scene sceneID="Vxp-g3-b0y">
             <objects>
-                <tableViewController storyboardIdentifier="conversation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rWJ-fM-qFC" userLabel="Conversation" customClass="ConversationTableViewController" customModule="crypto_chat" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="conversation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rWJ-fM-qFC" userLabel="Conversation" customClass="ConversationsViewController" customModule="crypto_chat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="yPm-Q1-1j8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -655,8 +655,8 @@ Note: The should be a Elliptic Cruve 256-bit PEM key. You can generate one by us
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="XPF-Yk-LZy"/>
-        <segue reference="j4v-rm-vQg"/>
-        <segue reference="gpI-0e-UPO"/>
+        <segue reference="SQl-QP-seP"/>
+        <segue reference="1gb-kf-onP"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemIndigoColor"/>
     <resources>

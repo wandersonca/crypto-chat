@@ -8,7 +8,7 @@
 import UIKit
 import CryptoKit
 
-class ProfileViewController: UIViewController {
+class AccountViewController: UIViewController {
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var publicKey: UITextView!
@@ -83,7 +83,7 @@ class ProfileViewController: UIViewController {
     // Segue to conversation view, set the contact we are starting conversation with
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        guard let conversationViewController = segue.destination as? ConversationViewController else {
+        guard let conversationViewController = segue.destination as? ChatViewController else {
             fatalError("Unexpected destination: \(segue.destination)")
         }
         conversationViewController.setContact(contact: self.account!)

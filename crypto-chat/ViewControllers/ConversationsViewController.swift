@@ -1,5 +1,5 @@
 //
-//  ConversationTableViewController.swift
+//  ConversationsViewController.swift
 //  ande3430_final
 //
 //  Created by Will Andserson on 2022-04-08.
@@ -14,7 +14,7 @@ class ConversationCell: UITableViewCell {
 }
 
 
-class ConversationTableViewController: UITableViewController {
+class ConversationsViewController: UITableViewController {
     let dataController = DataController.shared
     
     // Reloads the data when we come back from another screen (helpful for likes/dislikes)
@@ -38,7 +38,7 @@ class ConversationTableViewController: UITableViewController {
         super.prepare(for: segue, sender: sender)
 
         if segue.identifier == "ShowConversation" {
-            guard let conversationViewController = segue.destination as? ConversationViewController else {
+            guard let conversationViewController = segue.destination as? ChatViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             

@@ -1,5 +1,5 @@
 //
-//  ConversationViewController.swift
+//  ChatViewController.swift
 //  ande3430_final
 //
 //  Created by Will Andserson on 2022-04-08.
@@ -22,7 +22,7 @@ extension UITextView {
     }
 }
 
-class ConversationViewController: UIViewController, UITextFieldDelegate {
+class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var messageHistory: UITextView!
     @IBOutlet weak var sendText: UITextField!
     

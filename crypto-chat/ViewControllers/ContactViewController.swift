@@ -26,7 +26,7 @@ class ContactsViewController: UITableViewController {
         super.prepare(for: segue, sender: sender)
         
         if segue.identifier == "ShowContact" {
-            guard let profileViewController = segue.destination as? ProfileViewController else {
+            guard let profileViewController = segue.destination as? AccountViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
