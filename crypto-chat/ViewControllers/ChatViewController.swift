@@ -7,6 +7,57 @@
 
 import UIKit
 
+// Extension to change safe area when keyboard is active.
+// Credit: https://stackoverflow.com/questions/45399178/extend-ios-11-safe-area-to-include-the-keyboard 
+public extension UIViewController
+{
+    func startAvoidingKeyboard()
+    {
+        NotificationCenter.default
+            .addObserver(self,
+                         selector: #selector(onKeyboardFrameWillChangeNotificationReceived(_:)),
+                         name: UIResponder.keyboardWillChangeFrameNotification,
+                         object: nil)
+    }
+
+    func stopAvoidingKeyboard()
+    {
+        NotificationCenter.default
+            .removeObserver(self,
+                            name: UIResponder.keyboardWillChangeFrameNotification,
+                            object: nil)
+    }
+
+    @objc
+    private func onKeyboardFrameWillChangeNotificationReceived(_ notification: Notification)
+    {
+        guard
+            let userInfo = notification.userInfo,
+            let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        else {
+            return
+        }
+
+        let keyboardFrameInView = view.convert(keyboardFrame, from: nil)
+        let safeAreaFrame = view.safeAreaLayoutGuide.layoutFrame.insetBy(dx: 0, dy: -additionalSafeAreaInsets.bottom)
+        let intersection = safeAreaFrame.intersection(keyboardFrameInView)
+
+        let keyboardAnimationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey]
+        let animationDuration: TimeInterval = (keyboardAnimationDuration as? NSNumber)?.doubleValue ?? 0
+        let animationCurveRawNSN = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+        let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+        let animationCurve = UIView.AnimationOptions(rawValue: animationCurveRaw)
+
+        UIView.animate(withDuration: animationDuration,
+                       delay: 0,
+                       options: animationCurve,
+                       animations: {
+            self.additionalSafeAreaInsets.bottom = intersection.height
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+}
+
 extension UITextView {
     // Extends the UITextView so it stays scrolled to bottom with new lines centered to bottom
     func fixToBottom() {
@@ -38,7 +89,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateUI()
-        
+        self.startAvoidingKeyboard()
         // Subscribe to new messages
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateUI), name: Notification.Name("newMessages"), object: nil)
         self.sendText.delegate = self

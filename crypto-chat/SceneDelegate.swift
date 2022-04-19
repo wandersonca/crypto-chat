@@ -33,6 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // if user doesn't have a profile, hit the "signup" VC
             // instantiate the navigation controller and set it as root view controller
             // using the storyboard identifier
+            dataController.clear()
             let loginNavController = storyboard.instantiateViewController(identifier: "signup")
             window?.rootViewController = loginNavController
         }

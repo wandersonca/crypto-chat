@@ -11,7 +11,9 @@ import CryptoKit
 class AccountViewController: UIViewController {
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var publicKey: UITextView!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var messageButton: UIButton!
     
     private let dataController = DataController.shared
@@ -73,6 +75,18 @@ class AccountViewController: UIViewController {
                 if !self.isOwner {
                     self.navigationItem.title = name
                 }
+            }
+            if var phone = account.getPhone() {
+                if phone == "" {
+                    phone = "N/A"
+                }
+                self.phoneLabel.text = "Phone: \(phone)"
+            }
+            if var email = account.getEmail() {
+                if email == "" {
+                    email = "N/A"
+                }
+                self.emailLabel.text = "Email: \(email)"
             }
             if let publicKey = account.getPublicKey() {
                 self.publicKey.text = publicKey

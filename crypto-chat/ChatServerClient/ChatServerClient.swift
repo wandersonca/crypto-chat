@@ -13,7 +13,7 @@ class ChatServerClient {
     
     
     // Creates an Account, asynchronous result and data sent back with a closure
-    func createAccount(name: String, privateKey: String, completionBlock: @escaping (Bool, String) -> Void) {
+    func createAccount(name: String, phone: String = "", email: String = "", privateKey: String, completionBlock: @escaping (Bool, String) -> Void) {
         // Create an account object to send to server
         let newAccount = Account()
         do {
@@ -23,6 +23,8 @@ class ChatServerClient {
             completionBlock(false, "Failed to create public key from private key: \(error)")
         }
         newAccount.setName(name: name)
+        newAccount.setPhone(phone: phone)
+        newAccount.setEmail(email: email)
     
         // Encode object in JSON
         let jsonEncoder = JSONEncoder()
